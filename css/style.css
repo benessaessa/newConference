@@ -1,0 +1,29 @@
+/*
+@Author: ThemeMascot
+@URL: http://ThemeMascot.com
+
+This is the file where you can add your custom styles to change the look of the
+theme. But don't modify style-main.css file.
+
+*/
+.header-nav.navbar-transparent.animated-active {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.sponsors-style2 img{
+    width: 150px;
+    height: 120px;
+    margin-bottom:0.5rem;
+    object-fit: cover;
+}
+.newSponsor{
+    background: url(../images/conferenceH.jpg);
+}
+.btnHover:hover{
+    color: white !important;
+}
+.team-member img{
+    height: 400px;
+    width: 400px;
+    object-fit: cover;
+}
+/* Your custom css codes start here: */
