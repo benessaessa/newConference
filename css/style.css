@@ -21,9 +21,48 @@ theme. But don't modify style-main.css file.
 .btnHover:hover{
     color: white !important;
 }
-.team-member img{
-    height: 400px;
-    width: 400px;
+.teamH img{
+    height: 230px;
+    width: 100%;
     object-fit: cover;
+}
+.newTeam img{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+.guideS .pricing-table .table-title{
+    text-transform: capitalize;
+    font-size: 25px;
+}
+.newCardH .card{
+    min-height: unset;
+    background-color: cornsilk;
+}
+.newCardH .card:hover{
+    opacity: 0.9;
+    background-color:rgb(25, 131, 173);
+    color: white;
+}
+.iFrame {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 1.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+@media (max-width: 900px){
+    .menuzord-responsive .menuzord-menu > li > a {
+        padding: 12px 20px !important;
+        color: black;
+    }
 }
 /* Your custom css codes start here: */
