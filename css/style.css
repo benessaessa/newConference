@@ -38,11 +38,15 @@ theme. But don't modify style-main.css file.
 .newCardH .card{
     min-height: unset;
     background-color: cornsilk;
+    border-radius: 10px;
 }
 .newCardH .card:hover{
     opacity: 0.9;
-    background-color:rgb(25, 131, 173);
+    background-color:rgb(154, 194, 102);
     color: white;
+}
+.newCardH .card:hover .linkW,.newCardH .card:hover .linkW i{
+    color: black;
 }
 .iFrame {
     position: relative;
