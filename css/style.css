@@ -40,10 +40,16 @@ theme. But don't modify style-main.css file.
     background-color: cornsilk;
     border-radius: 10px;
 }
+.newCardH .cardWork{
+    min-height: unset;
+    background-color: rgb(255 253 189 / 63%);
+    border-radius: 10px;
+}
 .newCardH .card:hover{
     opacity: 0.9;
     background-color:rgb(154, 194, 102);
     color: white;
+    box-shadow: 3px 3px 3px 2px #ab9a9a;
 }
 .newCardH .card:hover .linkW,.newCardH .card:hover .linkW i{
     color: black;
@@ -71,7 +77,12 @@ theme. But don't modify style-main.css file.
     /* The height is 400 pixels */
     width: 100%;
     /* The width is the width of the web page */
-  }
+}
+.group{
+    background-color: #e7ecde;
+    padding: 1rem;
+    border-radius: 10px;
+}
 @media (max-width: 900px){
     .menuzord-responsive .menuzord-menu > li > a {
         padding: 12px 20px !important;
