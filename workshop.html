@@ -161,16 +161,15 @@
                         <div class="card mt-10 pt-0 pb-0 border-circle">
                           <div class="card-body text-left p-20">
                             <p class="font-weight-900"><i class="fa fa-user pr-5"></i> Organizer Name</p>
-                            <p>
-                              <i class="fa fa-home pr-5 fa-lg"></i>Egypt
-                            </p>
                             <p><i class="fa fa-paper-plane pr-5"></i>
-                              <a href="#" class="linkW font-weight-600">Workshop-link.com</a> 
+                              <a href="#" class="linkW font-weight-600">organizer@email.com</a> 
                             </p>
                             <p><i class="fa fa-edit pr-5"></i>
                               Cairo University
                             </p>
-                            <p><i class="fa fa-calendar pr-5"></i> 10/10/2020</p>
+                            <p>
+                              <i class="fa fa-home pr-5 fa-lg"></i>Egypt
+                            </p>
                           </div>
                         </div>
                       </div>
@@ -178,72 +177,15 @@
                         <div class="card mt-10 pt-0 pb-0 border-circle">
                           <div class="card-body text-left p-20">
                             <p class="font-weight-900"><i class="fa fa-user pr-5"></i> Organizer Name</p>
-                            <p>
-                              <i class="fa fa-home pr-5 fa-lg"></i>Egypt
-                            </p>
                             <p><i class="fa fa-paper-plane pr-5"></i>
-                              <a href="#" class="linkW font-weight-600">Workshop-link.com</a> 
+                              <a href="#" class="linkW font-weight-600">organizer@email.com</a> 
                             </p>
                             <p><i class="fa fa-edit pr-5"></i>
                               Cairo University
                             </p>
-                            <p><i class="fa fa-calendar pr-5"></i> 10/10/2020</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row equal-height-pricing-table newCardH">
-                <div class="col-xs-12 mb-10">
-                  <div class="group">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="card cardWork pt-0 pb-0 border-circle">
-                          <div class="card-body text-left p-20">
-                            <p class="font-weight-900"><i class="fa fa-user pr-5"></i> Workshop Name</p>
-                            <p><i class="fa fa-paper-plane pr-5"></i>
-                              <a href="#" class="linkW font-weight-600">Workshop-link.com</a> 
-                            </p>
-                            <p><i class="fa fa-calendar pr-5"></i> 10/10/2020</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h5 class="pt-5">Organizers</h5>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="card mt-10 pt-0 pb-0 border-circle">
-                          <div class="card-body text-left p-20">
-                            <p class="font-weight-900"><i class="fa fa-user pr-5"></i> Organizer Name</p>
                             <p>
                               <i class="fa fa-home pr-5 fa-lg"></i>Egypt
                             </p>
-                            <p><i class="fa fa-paper-plane pr-5"></i>
-                              <a href="#" class="linkW font-weight-600">Workshop-link.com</a> 
-                            </p>
-                            <p><i class="fa fa-edit pr-5"></i>
-                              Cairo University
-                            </p>
-                            <p><i class="fa fa-calendar pr-5"></i> 10/10/2020</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="card mt-10 pt-0 pb-0 border-circle">
-                          <div class="card-body text-left p-20">
-                            <p class="font-weight-900"><i class="fa fa-user pr-5"></i> Organizer Name</p>
-                            <p>
-                              <i class="fa fa-home pr-5 fa-lg"></i>Egypt
-                            </p>
-                            <p><i class="fa fa-paper-plane pr-5"></i>
-                              <a href="#" class="linkW font-weight-600">Workshop-link.com</a> 
-                            </p>
-                            <p><i class="fa fa-edit pr-5"></i>
-                              Cairo University
-                            </p>
-                            <p><i class="fa fa-calendar pr-5"></i> 10/10/2020</p>
                           </div>
                         </div>
                       </div>
@@ -353,31 +295,6 @@
                 <button type="submit" class="btn btn-default btn-flat btn-xs btn-transparent text-gray pt-5 pb-5" data-loading-text="Please wait...">Send Message</button>
               </div>
             </form>
-
-            <!-- Quick Contact Form Validation-->
-            <script type="text/javascript">
-              $("#quick_contact_form2").validate({
-                submitHandler: function(form) {
-                  var form_btn = $(form).find('button[type="submit"]');
-                  var form_result_div = '#form-result';
-                  $(form_result_div).remove();
-                  form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
-                  var form_btn_old_msg = form_btn.html();
-                  form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
-                  $(form).ajaxSubmit({
-                    dataType:  'json',
-                    success: function(data) {
-                      if( data.status == 'true' ) {
-                        $(form).find('.form-control').val('');
-                      }
-                      form_btn.prop('disabled', false).html(form_btn_old_msg);
-                      $(form_result_div).html(data.message).fadeIn('slow');
-                      setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
-                    }
-                  });
-                }
-              });
-            </script>
           </div>
         </div>
       </div>
@@ -405,6 +322,29 @@
 <!-- Footer Scripts -->
 <!-- JS | Custom script for all pages -->
 <script src="js/custom.js"></script>
-
+<!-- Quick Contact Form Validation-->
+<script type="text/javascript">
+  $("#quick_contact_form2").validate({
+    submitHandler: function(form) {
+      var form_btn = $(form).find('button[type="submit"]');
+      var form_result_div = '#form-result';
+      $(form_result_div).remove();
+      form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
+      var form_btn_old_msg = form_btn.html();
+      form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
+      $(form).ajaxSubmit({
+        dataType:  'json',
+        success: function(data) {
+          if( data.status == 'true' ) {
+            $(form).find('.form-control').val('');
+          }
+          form_btn.prop('disabled', false).html(form_btn_old_msg);
+          $(form_result_div).html(data.message).fadeIn('slow');
+          setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
+        }
+      });
+    }
+  });
+</script>
 </body>
 </html>
